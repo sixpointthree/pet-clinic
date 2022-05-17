@@ -19,24 +19,7 @@ jobs:
         distribution: temurin
         java-version: 11
         cache: maven
-    - name: SonarCloud Scan
-      description: >
-        Scan your code with SonarCloud to detect bugs, vulnerabilities and code smells
-        in more than 25 programming languages.
-      branding:
-      icon: check
-      color: green
-      runs:
-      using: docker
-      image: Dockerfile
-      inputs:
-        args:
-          description: Additional arguments to the sonarcloud scanner
-          required: false
-        projectBaseDir:
-          description: Set the sonar.projectBaseDir analysis property
-          required: false
-          default: .
+    
     - name: Compile, build and push
       run: |
         #### AUFGABE 3 DOCKER BUILD UND PUSH
